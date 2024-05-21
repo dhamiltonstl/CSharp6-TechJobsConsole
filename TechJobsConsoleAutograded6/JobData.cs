@@ -11,6 +11,7 @@ namespace TechJobsConsoleAutograded6
         public static List<Dictionary<string, string>> FindAll()
         {
             LoadData();
+
             return AllJobs;
         }
 
@@ -115,8 +116,10 @@ namespace TechJobsConsoleAutograded6
 
                 for (int i = 0; i < headers.Length; i++)
                 {
+                  //   Console.WriteLine(headers[i] + " : " + row[i]);
                     rowDict.Add(headers[i], row[i]);
                 }
+                  //   Console.WriteLine("END ENTRY");
                 AllJobs.Add(rowDict);
             }
 
