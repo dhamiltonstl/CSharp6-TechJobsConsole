@@ -135,13 +135,21 @@ namespace TechJobsConsoleAutograded6
         // TODO: complete the PrintJobs method.
         public void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            for (int idx = 0; idx < someJobs.Count; idx++)
+            if (someJobs.Count > 0)
             {
-               foreach (KeyValuePair<string, string> job in someJobs[idx])
+               for (int idx = 0; idx < someJobs.Count; idx++)
                {
-                  Console.WriteLine(job.Key + ": " + job.Value);
+                  Console.WriteLine(Environment.NewLine + "*****");
+                  foreach (KeyValuePair<string, string> job in someJobs[idx])
+                  {
+                     Console.WriteLine(job.Key + ": " + job.Value);
+                  }
+                  Console.WriteLine("*****");
                }
-               Console.WriteLine("");
+            }
+            else
+            {
+               Console.WriteLine("No results");
             }
         }
     }
